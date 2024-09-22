@@ -1,4 +1,4 @@
-# Iskola
+# Diák
 
 - Felhasználói szintű, regisztrálni kell, felhasználó, email cím, jelszó.
 
