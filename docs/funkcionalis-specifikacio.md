@@ -1,6 +1,6 @@
-## EduStat
+## EduStats
 
-### Egyetemi Tanárok és Tantárgyak Értékelési Oldala
+### Tanárok és tantárgyak értékelési oldala
 
 ### 1. **Áttekintés**
 
@@ -15,7 +15,6 @@ Ez a dokumentum az egyetemi tanárok és tantárgyak értékelési rendszerének
     -   Dinamikus felhasználói felület biztosítása a felhasználók számára.
     -   API hívások kezelése a Django REST backend felé.
     -   Felhasználói űrlapok kezelése: értékelési űrlapok, regisztrációs és bejelentkezési felületek.
-    -   Reszponzív dizájn biztosítása asztali és mobil nézetben.
 
 #### 2.2 **Backend**
 
@@ -25,6 +24,7 @@ Ez a dokumentum az egyetemi tanárok és tantárgyak értékelési rendszerének
     -   Felhasználói hitelesítés és jogosultságkezelés.
     -   REST API létrehozása a frontend számára.
     -   Adatok validálása és kezelés.
+    -   ORM (Object-Relational Mapping) használata az adatbázis rekordok kezelése érdekében.
 
 #### 2.3 **Adatbázis**
 

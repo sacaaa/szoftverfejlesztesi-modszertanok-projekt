@@ -1,6 +1,6 @@
-## EduStat
+## EduStats
 
-### Egyetemi Tanárok és Tantárgyak Értékelési Oldala
+### Tanárok és tantárgyak értékelési oldala
 
 ### 1. **Bevezetés**
 
