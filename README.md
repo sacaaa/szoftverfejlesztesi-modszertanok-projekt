@@ -3,7 +3,7 @@
 Fejlesztők:
 - Székelyhidi Sándor (HGXALJ)
 - Tóth Dániel (DVKNXI)
-- Székely Dávid
+- Székely Dávid (C5UJ0S)
 
 ## Projekt információk
 - Projekt neve: **EduStats**
