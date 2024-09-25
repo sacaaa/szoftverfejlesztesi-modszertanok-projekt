@@ -1,0 +1,19 @@
+@startuml
+
+class Entity {
+    +int Id : "egyedi azonosító"
+    +DateTime CreatedAt : "készítés dátum"
+    +DateTime UpdatedAt : "utolsó frissítés dátum"
+}
+
+class Teacher {
+    +string FirstName : "keresztnév"
+    +string MiddleName : "középsőnév"
+    +string LastName : "vezetéknév"
+    +Dict<TeacherSubjectAtSchool> Schools : "iskolák ahol tanít tárggyal összekötve"
+    +Dict<Review> Reviews : "vélemények amiket kapott"
+}
+
+Entity <|-- Teacher
+
+@enduml
