@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage/HomePage';
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<h1>Hello, EduStats!</h1>} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
     </>

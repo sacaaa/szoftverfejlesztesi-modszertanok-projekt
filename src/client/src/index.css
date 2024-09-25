@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: #ABD2DB;
     --main-text-color: black;
+    --main-max-width: 90%;
 }
 
 body {
