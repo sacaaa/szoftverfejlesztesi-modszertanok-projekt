@@ -59,3 +59,8 @@ body {
     width: 2.75rem;
     height: 2.75rem;
 }
+
+.Home {
+    text-decoration: none;
+    color: black;
+}

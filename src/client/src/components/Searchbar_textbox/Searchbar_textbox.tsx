@@ -4,7 +4,7 @@ export default function Searchbar_textbox() {
     return (<>
         <div className="search-container">
             <div className="search-box">
-                <label className="search-label">Keress rá iskoládra vagy tanárodra</label>
+                <label className="search-label">Keress rá tanárodra</label>
                 <input type="text" className="search-input" placeholder="Keresés" />
             </div>
             <div className="text-box">

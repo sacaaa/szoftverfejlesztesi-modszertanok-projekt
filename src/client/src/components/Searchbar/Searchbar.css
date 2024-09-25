@@ -1,0 +1,27 @@
+.searchbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    min-width: 800px;
+}
+
+.searchlabel {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #666;
+    text-align: left;
+    padding-right: 27rem;
+    /* Szürke */
+}
+
+.searchinput {
+    width: 600px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 23px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
