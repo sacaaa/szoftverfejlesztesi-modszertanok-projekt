@@ -1,0 +1,18 @@
+@startuml
+
+class Entity {
+    +int Id : "egyedi azonosító"
+    +DateTime CreatedAt : "készítés dátum"
+    +DateTime UpdatedAt : "utolsó frissítés dátum"
+}
+
+class School {
+    +string InstitutionId : "intézmény azonosító"
+    +string Name : "név"
+    +List<TeacherSubjectAtSchool> Teachers : "tanárok listája tantárgyakkal"
+    +List<Student> Students : "tanulók listája"
+}
+
+Entity <|-- School
+
+@enduml
