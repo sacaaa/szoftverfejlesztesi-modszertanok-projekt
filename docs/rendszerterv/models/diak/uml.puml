@@ -1,0 +1,29 @@
+@startuml
+
+class Entity {
+    +int Id : "egyedi azonosító"
+    +DateTime CreatedAt : "készítés dátum"
+    +DateTime UpdatedAt : "utolsó frissítés dátum"
+}
+
+class User {
+    +string Username : "felhasználónév"
+    +string PasswordHash : "jelszó hash"
+    +string Email : "email cím"
+    +bool EmailVerified : "megvan-e az email erősítve"
+    +UserRole Role : "szerepkör"
+}
+
+class Student {
+    +string FirstName : "keresztnév"
+    +string MiddleName : "középsőnév"
+    +string LastName : "vezetéknév"
+    +DateTime DateOfBirth : "születési dátum"
+    +School School : "iskolája"
+    +List<Review> Reviews : "vélemények amiket tett"
+}
+
+Entity <|-- User
+User <|-- Student
+
+@enduml
