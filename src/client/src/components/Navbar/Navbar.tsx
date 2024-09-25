@@ -10,7 +10,7 @@ export default function Navbar() {
             </div>
             <div className="navbar-center">
                 <Link to="/tanarok">Tanárok</Link>
-                <Link to="/">Iskolák</Link>
+                <Link to="/iskolak">Iskolák</Link>
             </div>
             <div className="navbar-right">
                 <div className="profile">
