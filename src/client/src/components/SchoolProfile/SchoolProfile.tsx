@@ -1,10 +1,10 @@
+import './SchoolProfile.css';
 
 interface SchoolProfileProps {
     schoolName: string;
     accountType: string;
     email: string;
     birthdate: string;
-    school: string;
 }
 
 

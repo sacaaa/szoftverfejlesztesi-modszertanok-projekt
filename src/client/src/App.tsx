@@ -4,6 +4,7 @@ import Tanarok from './pages/Tanarok/Tanarok';
 import Iskolak from './pages/Iskolak/Iskolak';
 import Profil from './pages/Profil/Profil';
 import IskolaProfil from './pages/IskolaProfil/IskolaProfil';
+import TanarProfil from './pages/TanarProfil/TanarProfil';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/iskolak" element={<Iskolak />} />
           <Route path='/profile' element={<Profil />} />
           <Route path='/iskolaprofil' element={<IskolaProfil />} />
+          <Route path='/tanarprofil' element={<TanarProfil />} />
         </Routes>
       </Router>
     </>

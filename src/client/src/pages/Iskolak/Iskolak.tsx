@@ -9,7 +9,7 @@ export default function Iskolak() {
         <Navbar />
         <Searchbar />
         <div className="school-list">
-            <Link to="/iskolaprofil" ><SchoolCard name={"Mechwart Anrdás Gimnázium és kollégium"}/></Link>
+            <Link to="/iskolaprofil" className="link-decoration"><SchoolCard name={"Mechwart Anrdás Gimnázium és kollégium"}/></Link>
             <SchoolCard name={"Mechwart Anrdás Gimnázium és kollégium"}/>
             <SchoolCard name={"Mechwart Anrdás Gimnázium és kollégium"}/>
             <SchoolCard name={"Mechwart Anrdás Gimnázium és kollégium"}/>
