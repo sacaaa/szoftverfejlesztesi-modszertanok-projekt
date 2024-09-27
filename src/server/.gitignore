@@ -80,7 +80,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Profiling data
+# Profiling fixtures
 .prof
 .ipynb_checkpoints
 
