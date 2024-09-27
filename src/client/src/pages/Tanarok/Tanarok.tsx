@@ -14,6 +14,7 @@ interface Teacher {
 export default function Tanarok() {
 
     const [teachers, setTeachers] = useState<Teacher[]>([]);
+    const [schools, setSchools] = useState({});
 
     useEffect(() => {
         const fetchTeachers = async () => {
@@ -27,9 +28,26 @@ export default function Tanarok() {
             } catch (error) {
                 console.log('Error fetching data: ', error);
             }
-        };
+        }
     
+        const fetchSchools = async () => {
+            try {
+                const response = await fetch('http://localhost:8000/api/schools');
+                const schoolsData = await response.json();
+                const schoolMap: { [key: number]: string } = {};
+                
+                schoolsData.forEach((school: { id: number; name: string }) => {
+                schoolMap[school.id] = school.name; // Iskola neveket ID alapján tároljuk egy objektumban
+                });
+
+                setSchools(schoolMap);
+            } catch (error) {
+                console.error('Error fetching schools:', error);
+                }
+            };
+
         fetchTeachers();
+        //fetchSchools();
     }, []);
     
     
