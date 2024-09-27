@@ -32,22 +32,25 @@ export default function Tanarok() {
     
         const fetchSchools = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/schools');
+                const response = await fetch('http://localhost:8000/api/schools/'); // Trailing slash
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const schoolsData = await response.json();
                 const schoolMap: { [key: number]: string } = {};
                 
                 schoolsData.forEach((school: { id: number; name: string }) => {
-                schoolMap[school.id] = school.name; // Iskola neveket ID alapján tároljuk egy objektumban
+                    schoolMap[school.id] = school.name;
                 });
-
+        
                 setSchools(schoolMap);
             } catch (error) {
                 console.error('Error fetching schools:', error);
-                }
-            };
+            }
+        };
 
         fetchTeachers();
-        //fetchSchools();
+        fetchSchools();
     }, []);
     
     
