@@ -18,16 +18,20 @@ export default function Tanarok() {
     useEffect(() => {
         const fetchTeachers = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/students');
+                const response = await fetch('http://localhost:8000/api/students/'); // Ensure trailing slash
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const jsonData = await response.json();
                 setTeachers(jsonData);
             } catch (error) {
                 console.log('Error fetching data: ', error);
             }
         };
-
+    
         fetchTeachers();
     }, []);
+    
     
     return (<>
         <Navbar />
