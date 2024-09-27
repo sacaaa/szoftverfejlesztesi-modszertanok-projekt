@@ -8,8 +8,7 @@ export default function IskolaProfil(){
             <SchoolProfile  schoolName="XY Általános Iskola és Kollégium"
                             accountType="Diák"
                             email="example@example.com"
-                            birthdate="2009.03.13"
-                            />
+                            birthdate="2009.03.13"/>
             
         </>
     )

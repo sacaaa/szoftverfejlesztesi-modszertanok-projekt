@@ -28,6 +28,9 @@
         "pk": 1,
         "fields": {
             "username": "student1",
+            "first_name": "Elek",
+            "email": "tesztelek@gmail.com",
+            "last_name": "Teszt",
             "password": "pbkdf2_sha256$216000$...",
             "birth_date": "2005-09-20",
             "school": 1,
