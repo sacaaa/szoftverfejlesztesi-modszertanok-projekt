@@ -1,0 +1,55 @@
+.teacher-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e1e4e8;
+    border-radius: 25px;
+    margin-top: 2rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.teacher-info {
+    display: flex;
+    align-items: center;
+}
+
+.teacher-avatar > .teacher-avatar-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+.teacher-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.teacher-school {
+    font-size: 14px;
+    color: #666;
+}
+
+.teacher-rating {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4a90e2;
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    color: rgb(80, 188, 224);
+    margin-left: 5px;
+    align-items: center;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
