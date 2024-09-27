@@ -8,13 +8,15 @@ interface Teacher {
     id: number;
     first_name: string;
     last_name: string;
-    school: string;
+    email: string;
+    birth_date: string;
+    school: number;
 }
 
 export default function Tanarok() {
 
     const [teachers, setTeachers] = useState<Teacher[]>([]);
-    const [schools, setSchools] = useState({});
+    const [schools, setSchools] = useState<{ [key: number]: string }>({});
 
     useEffect(() => {
         const fetchTeachers = async () => {
@@ -53,18 +55,32 @@ export default function Tanarok() {
         fetchSchools();
     }, []);
     
-    
+    const getSchoolNameById = (schoolId: number) => {
+        return schools[schoolId] || 'Ismeretlen Iskola';
+    };
+
     return (<>
-        <Navbar />
-        <Searchbar />
-        {teachers.map(teacher => (
-            <Link to="/tanarprofil" key={teacher.id} className="link-decoration">
-                <Teacher_list_item
-                    name={`${teacher.first_name} ${teacher.last_name}`}
-                    school={`${teacher.school}`}
-                    rating={(Math.random() * 4 + 1).toFixed(2)}
-                />
-            </Link>
-        ))}
-        </>)
+    <Navbar />
+    <Searchbar />
+    {teachers.map((teacher) => (
+        <Link to={{ pathname: `/tanarprofil`,}}
+            state={{
+                id: teacher.id,
+                name: `${teacher.first_name} ${teacher.last_name}`,
+                school: getSchoolNameById(teacher.school),
+                email: `${teacher.email}`,
+                birthdate: `${teacher.birth_date}`,
+                rating: (Math.random() * 4 + 1).toFixed(2),
+            }}
+            key={teacher.id}
+            className="link-decoration"
+        >
+        <Teacher_list_item
+            name={`${teacher.first_name} ${teacher.last_name}`}
+            school={getSchoolNameById(teacher.school)}
+            rating={(Math.random() * 4 + 1).toFixed(2)}
+        />
+        </Link>
+    ))}
+    </>)
 }

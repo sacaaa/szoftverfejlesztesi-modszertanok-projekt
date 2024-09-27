@@ -1,14 +1,20 @@
+import { useLocation } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Profile from "../../components/Profile/Profile";
 
 
 export default function TanarProfil() {
+    const location = useLocation();
+    const { name, school, email, birthdate } = location.state || {};
+
     return (<>
         <Navbar />
-        <Profile name="Nagy János"
+        <Profile
+            name={name}
             accountType="Tanár"
-            email="example@example.com"
-            birthdate="1964.03.13"
-            school="XY általános iskola és kollégium"/>
-        </>)
+            email={email}
+            birthdate={birthdate}
+            school={school}
+        />
+    </>)
 }

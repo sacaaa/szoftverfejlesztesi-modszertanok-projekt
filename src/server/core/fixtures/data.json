@@ -11,6 +11,17 @@
         }
     },
     {
+        "model": "core.school",
+        "pk": 2,
+        "fields": {
+            "institution_id": "SCH002",
+            "name": "Magyar Gimnázium és kollégium",
+            "address": "Budapest, Fő utca 22.",
+            "teachers": [1],
+            "students": [1]
+        }
+    },
+    {
         "model": "core.teacher",
         "pk": 1,
         "fields": {
@@ -34,6 +45,20 @@
             "password": "pbkdf2_sha256$216000$...",
             "birth_date": "2005-09-20",
             "school": 1,
+            "reviews": [1]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 2,
+        "fields": {
+            "username": "student2",
+            "first_name": "András",
+            "email": "tesztelek2@gmail.com",
+            "last_name": "Teszting",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-01-20",
+            "school": 2,
             "reviews": [1]
         }
     },
