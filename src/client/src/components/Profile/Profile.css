@@ -1,0 +1,28 @@
+.student-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    min-height: 400px;
+    margin: auto;
+    margin-top: 10rem;
+}
+
+.student-card h2 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 54px;
+    margin-bottom: 3rem;
+}
+
+.student-card p {
+    color: #666666;
+    font-size: 25px;
+    margin: 5px 0;
+    padding: 0.5rem;
+}
+
+.student-card p strong {
+    color: #333333;
+}

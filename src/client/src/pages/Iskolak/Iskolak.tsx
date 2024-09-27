@@ -3,11 +3,7 @@ import Searchbar from "../../components/Searchbar/Searchbar";
 import SchoolCard from "../../components/School_list/SchoolCard";
 import './Iskolak.css';
 
-interface SchoolCardNames {
-    name: string;
-}
-
-export default function Iskolak({ name }: SchoolCardNames) {
+export default function Iskolak() {
     return (<>
         <Navbar />
         <Searchbar />

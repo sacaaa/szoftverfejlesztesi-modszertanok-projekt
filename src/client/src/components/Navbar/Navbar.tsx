@@ -12,6 +12,7 @@ export default function Navbar() {
                 <Link to="/tanarok">Tanárok</Link>
                 <Link to="/iskolak">Iskolák</Link>
             </div>
+            <Link to="/profile" className="profile-link">
             <div className="navbar-right">
                 <div className="profile">
                     <span>Kis Pista András</span>
@@ -19,6 +20,7 @@ export default function Navbar() {
                 </div>
                 <CgProfile className="profile-img"/>
             </div>
+            </Link>
         </nav>
     </>)
 }

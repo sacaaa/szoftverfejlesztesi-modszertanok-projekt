@@ -30,7 +30,7 @@ body {
 
 .navbar-right {
     display: flex;
-    align-items: center;
+    align-items: center; 
 }
 
 .profile {
@@ -61,6 +61,11 @@ body {
 }
 
 .Home {
+    text-decoration: none;
+    color: black;
+}
+
+.profile-link {
     text-decoration: none;
     color: black;
 }
