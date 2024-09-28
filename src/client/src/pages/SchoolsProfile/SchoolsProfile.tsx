@@ -12,7 +12,7 @@ interface School {
     logo: string;
 }
 
-export default function IskolaProfil() {
+export default function SchoolsProfile() {
     const { id } = useParams<{ id: string }>();
     const [school, setSchool] = useState<School | null>(null);
 

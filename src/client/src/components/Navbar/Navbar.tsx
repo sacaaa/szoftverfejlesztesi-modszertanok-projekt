@@ -9,8 +9,8 @@ export default function Navbar() {
                 <Link to="/" className="Home"><h1>EDUSTATS</h1></Link>
             </div>
             <div className="navbar-center">
-                <Link to="/tanarok">Tanárok</Link>
-                <Link to="/iskolak">Iskolák</Link>
+                <Link to="/teachers">Tanárok</Link>
+                <Link to="/schools">Iskolák</Link>
             </div>
             <Link to="/profile" className="profile-link">
             <div className="navbar-right">

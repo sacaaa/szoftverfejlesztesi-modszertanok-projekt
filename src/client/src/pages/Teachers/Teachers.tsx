@@ -16,7 +16,7 @@ interface Teacher {
     avg_rate: number | null;
 }
 
-export default function Tanarok() {
+export default function Teachers() {
 
     const [teachers, setTeachers] = useState<Teacher[]>([]);
     const [schools, setSchools] = useState<{ [key: number]: string }>({});
@@ -68,7 +68,7 @@ export default function Tanarok() {
             <Searchbar />
             {teachers.map((teacher) => (
                 <Link 
-                    to={`/tanarprofil/${teacher.id}`}
+                    to={`/teacherprofile/${teacher.id}`}
                     key={teacher.id}
                     className="link-decoration"
                 >

@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Searchbar from "../../components/Searchbar/Searchbar";
 import SchoolCard from "../../components/School_list/SchoolCard";
 import { Link } from "react-router-dom";
-import './Iskolak.css';
+import './Schools.css';
 
 interface School {
     id: number;
@@ -11,7 +11,7 @@ interface School {
     logo: string;
 }
 
-export default function Iskolak() {
+export default function Schools() {
     const [schools, setSchools] = useState<School[]>([]);
 
     useEffect(() => {
@@ -39,7 +39,7 @@ export default function Iskolak() {
                 {schools.map((school) => (
                     <Link
                         key={school.id}
-                        to={`/iskolaprofil/${school.id}`} 
+                        to={`/schoolprofile/${school.id}`} 
                         state={{ name: school.name }} 
                         className="link-decoration"
                     >

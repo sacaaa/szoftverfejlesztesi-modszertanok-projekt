@@ -15,7 +15,7 @@ interface Teacher {
     avg_rate: number | null;
 }
 
-export default function TanarProfil() {
+export default function TeachersProfile() {
     const { id } = useParams();
     const [teacher, setTeacher] = useState<Teacher | null>(null);
     const [schoolName, setSchoolName] = useState<string>('');
