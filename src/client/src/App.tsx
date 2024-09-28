@@ -17,11 +17,12 @@ function App() {
           <Route path="/iskolak" element={<Iskolak />} />
           <Route path='/profile' element={<Profil />} />
           <Route path='/iskolaprofil' element={<IskolaProfil />} />
-          <Route path='/tanarprofil' element={<TanarProfil />} />
+          {/* Dinamikus útvonal a tanár profiljához, ahol az :id a tanár azonosítója */}
+          <Route path='/tanarprofil/:id' element={<TanarProfil />} />
         </Routes>
       </Router>
     </>
   )
 }
 
-export default App
+export default App;
