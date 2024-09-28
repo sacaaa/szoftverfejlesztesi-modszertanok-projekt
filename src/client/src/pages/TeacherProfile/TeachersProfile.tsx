@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Profile from "../../components/Profile/Profile";
+import ReviewForm from "../../components/ReviewForm/ReviewForm";
 
 interface Teacher {
     id: number;
@@ -64,6 +65,7 @@ export default function TeachersProfile() {
                 school={schoolName}
                 avgRate={teacher.avg_rate ? teacher.avg_rate.toFixed(2) : "N/A"}
             />
+            <ReviewForm />
         </>
     );
 }
