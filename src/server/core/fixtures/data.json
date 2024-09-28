@@ -25,13 +25,13 @@
         "model": "core.teacher",
         "pk": 1,
         "fields": {
-            "title": "Mr",
+            "title": "Dr",
             "first_name": "János",
             "last_name": "Kovács",
             "birth_date": "1980-05-15",
             "email": "janos.kovacs@example.com",
             "school": 1,
-            "reviews": [1]
+            "reviews": [1, 2, 3]
         }
     },
     {
@@ -45,7 +45,7 @@
             "password": "pbkdf2_sha256$216000$...",
             "birth_date": "2005-09-20",
             "school": 1,
-            "reviews": [1]
+            "reviews": [1, 2, 3]
         }
     },
     {
@@ -67,7 +67,27 @@
         "pk": 1,
         "fields": {
             "rating": 5,
-            "comment": "Kiváló tanuló!",
+            "comment": "Kiváló tanár!",
+            "student": 1,
+            "teacher": 1
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 2,
+        "fields": {
+            "rating": 1,
+            "comment": "Nagyon rossz tanár!",
+            "student": 1,
+            "teacher": 1
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 3,
+        "fields": {
+            "rating": 4,
+            "comment": "Átlagon felüli tanár!",
             "student": 1,
             "teacher": 1
         }

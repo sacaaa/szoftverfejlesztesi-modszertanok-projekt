@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from .models import Student, Teacher, School, Review
 from .serializers import StudentSerializer, TeacherSerializer, SchoolSerializer, ReviewSerializer
+from django.db.models import Avg
 
 
 class StudentViewSet(viewsets.ModelViewSet):
@@ -9,7 +10,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 
 
 class TeacherViewSet(viewsets.ModelViewSet):
-    queryset = Teacher.objects.all()
+    queryset = Teacher.objects.all().annotate(avg_rate=Avg('reviews__rating'))
     serializer_class = TeacherSerializer
 
 
