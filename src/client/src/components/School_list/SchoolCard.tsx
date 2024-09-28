@@ -2,13 +2,14 @@ import './SchoolCard.css';
 
 interface SchoolCardProps {
     name: string;
+    logo: string;
 }
 
-const SchoolCard = ({ name }: SchoolCardProps) => {
+const SchoolCard = ({ name, logo }: SchoolCardProps) => {
     return (
         <div className="card">
             <div className="card-body">
-                {/* Itt lehetne egy kép vagy más tartalom */}
+                <img src={logo} alt={`${name} logo`} className="school-logo" />
             </div>
             <div className="card-footer">
                 {name}

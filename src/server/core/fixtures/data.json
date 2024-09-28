@@ -1,14 +1,15 @@
 [
     {
-        "model": "core.school",
-        "pk": 1,
-        "fields": {
-            "institution_id": "SCH001",
-            "name": "Magyar Általános Iskola",
-            "address": "Budapest, Fő utca 1.",
-            "teachers": [1],
-            "students": [1]
-        }
+    "model": "core.school",
+    "pk": 1,
+    "fields": {
+        "institution_id": "SCH001",
+        "name": "Magyar Általános Iskola",
+        "address": "Budapest, Fő utca 1.",
+        "logo": "static/images/SCH001.svg",
+        "teachers": [1],
+        "students": [1]
+    }
     },
     {
         "model": "core.school",
@@ -17,6 +18,7 @@
             "institution_id": "SCH002",
             "name": "Magyar Gimnázium és kollégium",
             "address": "Budapest, Fő utca 22.",
+            "logo": "static/images/SCH002.svg",
             "teachers": [1],
             "students": [1]
         }

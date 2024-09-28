@@ -24,7 +24,7 @@ export default function Tanarok() {
     useEffect(() => {
         const fetchTeachers = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/teachers/'); // Helyes végpont
+                const response = await fetch('http://localhost:8000/api/teachers/');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -37,7 +37,7 @@ export default function Tanarok() {
     
         const fetchSchools = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/schools/'); // Trailing slash
+                const response = await fetch('http://localhost:8000/api/schools/');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -68,7 +68,7 @@ export default function Tanarok() {
             <Searchbar />
             {teachers.map((teacher) => (
                 <Link 
-                    to={`/tanarprofil/${teacher.id}`} // Dinamikus útvonal az ID alapján
+                    to={`/tanarprofil/${teacher.id}`}
                     key={teacher.id}
                     className="link-decoration"
                 >

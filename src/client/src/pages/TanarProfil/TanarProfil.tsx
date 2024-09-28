@@ -16,7 +16,7 @@ interface Teacher {
 }
 
 export default function TanarProfil() {
-    const { id } = useParams(); // ID lekérése az URL-ből
+    const { id } = useParams();
     const [teacher, setTeacher] = useState<Teacher | null>(null);
     const [schoolName, setSchoolName] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
@@ -31,7 +31,6 @@ export default function TanarProfil() {
                 const data: Teacher = await response.json();
                 setTeacher(data);
                 
-                // Fetch school name based on school ID
                 const schoolResponse = await fetch(`http://localhost:8000/api/schools/${data.school}/`);
                 const schoolData = await schoolResponse.json();
                 setSchoolName(schoolData.name);

@@ -71,6 +71,7 @@ class School(models.Model):
         students: Az iskolához tartozó tanulók.
     """
     institution_id = models.CharField(max_length=10, blank=False, null=False)
+    logo = models.ImageField(upload_to='static/images/', blank=True, null=True)
     name = models.CharField(max_length=100, blank=False, null=False)
     address = models.CharField(max_length=100, blank=False, null=False)
     teachers = models.ManyToManyField(

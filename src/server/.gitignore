@@ -26,7 +26,7 @@ build/
 *.pyd
 *.sqlite3
 db.sqlite3
-/media
+/core/media
 /staticfiles
 
 # If your Django configuration contains the SECRET_KEY setting:

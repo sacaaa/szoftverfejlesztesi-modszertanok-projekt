@@ -16,8 +16,7 @@ function App() {
           <Route path="/tanarok" element={<Tanarok />} />
           <Route path="/iskolak" element={<Iskolak />} />
           <Route path='/profile' element={<Profil />} />
-          <Route path='/iskolaprofil' element={<IskolaProfil />} />
-          {/* Dinamikus útvonal a tanár profiljához, ahol az :id a tanár azonosítója */}
+          <Route path='/iskolaprofil/:id' element={<IskolaProfil />} />
           <Route path='/tanarprofil/:id' element={<TanarProfil />} />
         </Routes>
       </Router>
