@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Student, Teacher, School, Review
-from django.db.models import Avg  # Hozzáadva az Avg import
+from django.db.models import Avg
 
 
 class StudentSerializer(serializers.ModelSerializer):
@@ -10,14 +10,16 @@ class StudentSerializer(serializers.ModelSerializer):
 
 
 class ReviewSerializer(serializers.ModelSerializer):
+    student = StudentSerializer(read_only=True)
+
     class Meta:
         model = Review
-        fields = '__all__'
+        fields = ['id', 'rating', 'comment', 'created_at', 'student']
 
 
 class TeacherSerializer(serializers.ModelSerializer):
     avg_rate = serializers.SerializerMethodField()
-    reviews = ReviewSerializer(many=True, read_only=True)
+    reviews = ReviewSerializer(many=True, read_only=True)  # Használj ReviewSerializer-t
 
     class Meta:
         model = Teacher
@@ -29,7 +31,7 @@ class TeacherSerializer(serializers.ModelSerializer):
             'birth_date',
             'email',
             'school',
-            'reviews',
+            'reviews',  # Itt már részletes review-kat kapsz
             'avg_rate',
         ]
 

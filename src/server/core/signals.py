@@ -7,3 +7,7 @@ from django.core.management import call_command
 def load_initial_data(sender, **kwargs):
     if sender == 'core':
         call_command('loaddata', 'data.json')
+
+    from core.models import Review
+    print("sdadsad")
+    print(Review.objects.get(id=1))

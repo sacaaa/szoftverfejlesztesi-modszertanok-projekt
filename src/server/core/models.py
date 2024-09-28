@@ -1,6 +1,6 @@
 from django.contrib.auth.models import AbstractUser, Permission, Group
-from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Student(AbstractUser):
@@ -103,3 +103,4 @@ class Review(models.Model):
     teacher = models.ForeignKey(
         Teacher, on_delete=models.CASCADE, blank=False, null=False, related_name='teacher_reviews'
     )
+    created_at = models.DateTimeField(auto_now_add=True)
