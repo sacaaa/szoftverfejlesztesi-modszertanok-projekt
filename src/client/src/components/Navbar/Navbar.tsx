@@ -12,7 +12,7 @@ export default function Navbar() {
                 <Link to="/teachers">Tanárok</Link>
                 <Link to="/schools">Iskolák</Link>
             </div>
-            <Link to="/profile" className="profile-link">
+            <Link to="/profilepage" className="profile-link">
             <div className="navbar-right">
                 <div className="profile">
                     <span>Kis Pista András</span>
