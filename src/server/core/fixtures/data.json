@@ -25,7 +25,7 @@
         "model": "core.teacher",
         "pk": 1,
         "fields": {
-            "title": "Dr",
+            "title": "Dr.",
             "first_name": "János",
             "last_name": "Kovács",
             "birth_date": "1980-05-15",
