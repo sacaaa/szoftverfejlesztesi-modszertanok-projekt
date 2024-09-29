@@ -1,10 +1,28 @@
 import './Searchbar.css';
 
-export default function Searchbar() {
-    return(<>
+interface SearchbarProps {
+    searchQuery: string;
+    setSearchQuery: (query: string) => void;
+    searchType: 'teacher' | 'school'; // Új prop a keresési típushoz
+}
+
+export default function Searchbar({ searchQuery, setSearchQuery, searchType }: SearchbarProps) {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(e.target.value);
+    };
+
+    return (
         <div className="searchbox">
-            <label className="searchlabel">Keress rá tanárodra</label>
-            <input type="text" className="searchinput" placeholder="Keresés" />
+            <label className="searchlabel">
+                {searchType === 'teacher' ? 'Keress rá tanárodra' : 'Keress rá az iskoládra'}
+            </label>
+            <input
+                type="text"
+                className="searchinput"
+                placeholder="Keresés"
+                value={searchQuery}
+                onChange={handleInputChange}
+            />
         </div>
-    </>)
+    );
 }
