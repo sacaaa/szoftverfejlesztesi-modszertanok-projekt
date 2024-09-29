@@ -1,26 +1,28 @@
 import { CgProfile } from "react-icons/cg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import './Navbar.css';
 
 export default function Navbar() {
-    return (<>
+    const location = useLocation(); // Aktuális URL lekérése
+
+    return (
         <nav className="navbar">
             <div className="navbar-left">
                 <Link to="/" className="Home"><h1>EDUSTATS</h1></Link>
             </div>
             <div className="navbar-center">
-                <Link to="/teachers">Tanárok</Link>
-                <Link to="/schools">Iskolák</Link>
+                <Link to="/teachers" className={location.pathname === '/teachers' ? 'active' : ''}>Tanárok</Link>
+                <Link to="/schools" className={location.pathname === '/schools' ? 'active' : ''}>Iskolák</Link>
             </div>
             <Link to="/profilepage" className="profile-link">
-            <div className="navbar-right">
-                <div className="profile">
-                    <span>Kis Pista András</span>
-                    <p>XY általános iskola és kollégium</p>
+                <div className="navbar-right">
+                    <div className="profile">
+                        <span className="profile-name">Kis Pista András</span>
+                        <p className="profile-school">XY általános iskola és kollégium</p>
+                    </div>
+                    <CgProfile className="profile-img" />
                 </div>
-                <CgProfile className="profile-img"/>
-            </div>
             </Link>
         </nav>
-    </>)
+    );
 }

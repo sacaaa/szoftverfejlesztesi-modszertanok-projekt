@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 .navbar {
@@ -13,59 +13,69 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    background-color: transparent; /* Háttérszín eltávolítva */
 }
 
 .navbar-left h1 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Nagyobb cím méret */
     font-weight: bold;
+    color: black; /* Fekete szín */
+}
+
+.navbar-center {
+    display: flex; /* Flexbox a középső részhez */
+    justify-content: center; /* Középre igazítás */
+    flex: 1; /* Középső rész rugalmasan kitölti a helyet */
 }
 
 .navbar-center a {
     margin: 0 20px;
-    font-size: 1.75rem;
+    font-size: 1.25rem; /* Kisebb betűméret */
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    color: black; /* Fekete szín */
+    font-weight: normal; /* Vastagság csökkentése */
+    transition: font-weight 0.3s ease; /* Betűvastagság animáció */
+}
+
+/* Aktuális oldal és hover hatás */
+.navbar-center a:hover,
+.navbar-center a.active {
+    font-weight: bold; /* Vastag betű */
 }
 
 .navbar-right {
     display: flex;
     align-items: center; 
+    text-align: right; /* Jobbra igazítva */
 }
 
 .profile {
-    text-align: center;
+    text-align: right; /* Profil szövegek jobbra igazítva */
     margin-right: 10px;
 }
 
-.profile span {
+.profile-name {
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-.profile p {
+.profile-school {
     font-size: 0.9rem;
     margin-top: 2px;
 }
 
-.profile img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-left: 10px;
-}
-
 .profile-img {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 3rem; /* Nagyobb profil ikon */
+    height: 3rem;
+    color: black; /* Fekete ikon */
 }
 
 .Home {
     text-decoration: none;
-    color: black;
+    color: black; /* Fekete szín */
 }
 
 .profile-link {
     text-decoration: none;
-    color: black;
+    color: black; /* Fekete szín */
 }
