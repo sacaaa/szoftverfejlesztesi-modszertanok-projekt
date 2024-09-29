@@ -17,9 +17,9 @@ interface Teacher {
 }
 
 export default function Teachers() {
-
     const [teachers, setTeachers] = useState<Teacher[]>([]);
     const [schools, setSchools] = useState<{ [key: number]: string }>({});
+    const [searchQuery, setSearchQuery] = useState<string>("");
 
     useEffect(() => {
         const fetchTeachers = async () => {
@@ -34,7 +34,7 @@ export default function Teachers() {
                 console.log('Error fetching data: ', error);
             }
         }
-    
+
         const fetchSchools = async () => {
             try {
                 const response = await fetch('http://localhost:8000/api/schools/');
@@ -43,11 +43,11 @@ export default function Teachers() {
                 }
                 const schoolsData = await response.json();
                 const schoolMap: { [key: number]: string } = {};
-                
+
                 schoolsData.forEach((school: { id: number; name: string }) => {
                     schoolMap[school.id] = school.name;
                 });
-        
+
                 setSchools(schoolMap);
             } catch (error) {
                 console.error('Error fetching schools:', error);
@@ -57,23 +57,32 @@ export default function Teachers() {
         fetchTeachers();
         fetchSchools();
     }, []);
-    
+
     const getSchoolNameById = (schoolId: number) => {
         return schools[schoolId] || 'Ismeretlen Iskola';
     };
 
+    // Szűrés a keresési lekérdezés alapján
+    const filteredTeachers = teachers.filter((teacher) => {
+        const fullName = `${teacher.title} ${teacher.last_name} ${teacher.first_name}`.toLowerCase();
+        const schoolName = getSchoolNameById(teacher.school).toLowerCase();
+        const query = searchQuery.toLowerCase();
+
+        return fullName.includes(query) || schoolName.includes(query);
+    });
+
     return (
         <>
             <Navbar />
-            <Searchbar />
-            {teachers.map((teacher) => (
+            <Searchbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} searchType="teacher" />
+            {filteredTeachers.map((teacher) => (
                 <Link 
                     to={`/teacherprofile/${teacher.id}`}
                     key={teacher.id}
                     className="link-decoration"
                 >
                     <Teacher_list_item
-                        name={`${teacher.title} ${teacher.first_name} ${teacher.last_name}`}
+                        name={`${teacher.title} ${teacher.last_name} ${teacher.first_name}`}
                         school={getSchoolNameById(teacher.school)}
                         rating={teacher.avg_rate !== null ? teacher.avg_rate.toFixed(2) : "N/A"}
                     />
