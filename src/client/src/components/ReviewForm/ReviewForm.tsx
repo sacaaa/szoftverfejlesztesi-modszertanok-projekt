@@ -1,58 +1,93 @@
+// ReviewForm.tsx
 import { useState } from "react";
 import './ReviewForm.css';
 
-export default function ReviewForm() {
-    const [teacherName, setTeacherName] = useState('');
-    const [rating, setRating] = useState(5);
-    const [comment, setComment] = useState('');
+interface ReviewFormProps {
+    teacherId: number;
+    onReviewSubmitted: () => void;
+}
 
-    const handleSubmit = (event: { preventDefault: () => void; }) => {
+export default function ReviewForm({ teacherId, onReviewSubmitted }: ReviewFormProps) {
+    const [rating, setRating] = useState<number>(5);
+    const [comment, setComment] = useState<string>('');
+    const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        // Adatok feldolgozása itt, pl. elküldheted egy backendnek
-        console.log({
-            teacherName,
-            rating,
-            comment,
-        });
+        setLoading(true);
+        setError(null);
+        
+        try {
+            const response = await fetch('http://localhost:8000/api/reviews/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // Ha van autentikáció, például JWT token
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+                body: JSON.stringify({
+                    rating,
+                    comment,
+                    teacher: teacherId,
+                }),
+            });
 
-        // Resetelheted a formot, ha akarod
-        setTeacherName('');
-        setRating(5);
-        setComment('');
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Hiba a vélemény beküldésekor.');
+            }
+
+            // Reset form
+            setRating(5);
+            setComment('');
+
+            // Hívja meg a callbackot a visszatöltéshez
+            onReviewSubmitted();
+        } catch (err: any) {
+            console.error(err);
+            setError(err.message || 'Hiba a vélemény beküldésekor.');
+        } finally {
+            setLoading(false);
+        }
     };
 
-    return (<>
+    return (
         <div className="review-form-container">
-        <h2>Vélemény írása</h2>
-        <form onSubmit={handleSubmit} className="review-form">
+            <h2>Vélemény írása</h2>
+            <form onSubmit={handleSubmit} className="review-form">
 
-        <label>
-            Értékelés:
-            <select
-                value={rating}
-                onChange={(e) => setRating(Number(e.target.value))}
-            >
-                <option value="1">1 - Nagyon rossz</option>
-                <option value="2">2 - Rossz</option>
-                <option value="3">3 - Közepes</option>
-                <option value="4">4 - Jó</option>
-                <option value="5">5 - Kiváló</option>
-            </select>
-        </label>
+                <label>
+                    Értékelés:
+                    <select
+                        value={rating}
+                        onChange={(e) => setRating(Number(e.target.value))}
+                    >
+                        <option value="1">1 - Nagyon rossz</option>
+                        <option value="2">2 - Rossz</option>
+                        <option value="3">3 - Közepes</option>
+                        <option value="4">4 - Jó</option>
+                        <option value="5">5 - Kiváló</option>
+                    </select>
+                </label>
 
-        <label>
-            Vélemény:
-            <textarea
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-                placeholder="Írj véleményt a tanárról..."
-                rows={4}
-                required
-            ></textarea>
-        </label>
+                <label>
+                    Vélemény:
+                    <textarea
+                        value={comment}
+                        onChange={(e) => setComment(e.target.value)}
+                        placeholder="Írj véleményt a tanárról..."
+                        rows={4}
+                        required
+                    ></textarea>
+                </label>
 
-            <button type="submit">Vélemény beküldése</button>
-        </form>
-    </div>
-    </>)
+                {error && <p className="error-message">{error}</p>}
+
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Beküldés...' : 'Vélemény beküldése'}
+                </button>
+            </form>
+        </div>
+    );
 }
