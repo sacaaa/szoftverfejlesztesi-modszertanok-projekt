@@ -1,26 +1,62 @@
 [
     {
-    "model": "core.school",
-    "pk": 1,
-    "fields": {
-        "institution_id": "SCH001",
-        "name": "Magyar Általános Iskola",
-        "address": "Budapest, Fő utca 1.",
-        "logo": "static/images/SCH001.svg",
-        "teachers": [1],
-        "students": [1]
-    }
+        "model": "core.school",
+        "pk": 1,
+        "fields": {
+            "institution_id": "SCH001",
+            "name": "Debreceni Egyetem",
+            "address": "Budapest, Fő utca 1.",
+            "logo": "static/images/SCH001.svg",
+            "teachers": [1, 8],
+            "students": [1, 9, 10]
+        }
     },
     {
         "model": "core.school",
         "pk": 2,
         "fields": {
             "institution_id": "SCH002",
-            "name": "Magyar Gimnázium és kollégium",
+            "name": "Eötvös Loránd Tudományegyetem",
             "address": "Budapest, Fő utca 22.",
             "logo": "static/images/SCH002.svg",
-            "teachers": [1],
-            "students": [1]
+            "teachers": [9, 10],
+            "students": [2, 9, 10]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 3,
+        "fields": {
+            "institution_id": "SCH003",
+            "name": "Budapesti Műszaki Egyetem",
+            "address": "Budapest, Műszaki út 5.",
+            "logo": "static/images/SCH003.svg",
+            "teachers": [2, 3],
+            "students": [3, 4]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 4,
+        "fields": {
+            "institution_id": "SCH004",
+            "name": "Debreceni Egyetem Kossuth Lajos Gyakorló Gimnáziuma",
+            "address": "Debrecen, Fő utca 10.",
+            "logo": "static/images/SCH004.svg",
+            "teachers": [4, 5],
+            "students": [5, 6]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 5,
+        "fields": {
+            "institution_id": "SCH005",
+            "name": "Szegedi Tudományegyetem",
+            "address": "Szeged, Kossuth tér 2.",
+            "logo": "static/images/SCH005.svg",
+            "teachers": [6, 7],
+            "students": [7, 8]
         }
     },
     {
@@ -33,7 +69,124 @@
             "birth_date": "1980-05-15",
             "email": "janos.kovacs@example.com",
             "school": 1,
-            "reviews": [1, 2, 3]
+            "reviews": [1, 2, 3, 13]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 2,
+        "fields": {
+            "title": "Prof.",
+            "first_name": "Miklós",
+            "last_name": "Nagy",
+            "birth_date": "1975-03-22",
+            "email": "miklos.nagy@example.com",
+            "school": 3,
+            "reviews": [4, 5]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 3,
+        "fields": {
+            "title": "",
+            "first_name": "Erika",
+            "last_name": "Szabó",
+            "birth_date": "1982-11-10",
+            "email": "erika.szabo@example.com",
+            "school": 3,
+            "reviews": [6]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 4,
+        "fields": {
+            "title": "",
+            "first_name": "Gábor",
+            "last_name": "Horváth",
+            "birth_date": "1978-07-05",
+            "email": "gabor.horvath@example.com",
+            "school": 4,
+            "reviews": [7, 8]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 5,
+        "fields": {
+            "title": "Dr.",
+            "first_name": "Katalin",
+            "last_name": "Kiss",
+            "birth_date": "1985-02-17",
+            "email": "katalin.kiss@example.com",
+            "school": 4,
+            "reviews": [9]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 6,
+        "fields": {
+            "title": "",
+            "first_name": "Eszter",
+            "last_name": "Tóth",
+            "birth_date": "1990-08-25",
+            "email": "eszter.toth@example.com",
+            "school": 5,
+            "reviews": [10, 11]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 7,
+        "fields": {
+            "title": "",
+            "first_name": "Andrea",
+            "last_name": "Varga",
+            "birth_date": "1983-12-12",
+            "email": "andrea.varga@example.com",
+            "school": 5,
+            "reviews": [12]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 8,
+        "fields": {
+            "title": "Dr.",
+            "first_name": "László",
+            "last_name": "Molnár",
+            "birth_date": "1970-04-03",
+            "email": "laszlo.molnar@example.com",
+            "school": 1,
+            "reviews": [13]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 9,
+        "fields": {
+            "title": "Prof.",
+            "first_name": "Zoltán",
+            "last_name": "Farkas",
+            "birth_date": "1988-09-19",
+            "email": "zoltan.farkas@example.com",
+            "school": 2,
+            "reviews": [14]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 10,
+        "fields": {
+            "title": "",
+            "first_name": "Balázs",
+            "last_name": "Boros",
+            "birth_date": "1979-06-30",
+            "email": "balazs.boros@example.com",
+            "school": 2,
+            "reviews": [15]
         }
     },
     {
@@ -42,12 +195,12 @@
         "fields": {
             "username": "teszt",
             "first_name": "Elek",
-            "email": "tesztelek@gmail.com",
             "last_name": "Teszt",
+            "email": "tesztelek@gmail.com",
             "password": "teszt",
             "birth_date": "2005-09-20",
             "school": 1,
-            "reviews": [1, 2, 3]
+            "reviews": [1, 2, 3, 13]
         }
     },
     {
@@ -56,12 +209,124 @@
         "fields": {
             "username": "student2",
             "first_name": "András",
-            "email": "tesztelek2@gmail.com",
             "last_name": "Teszting",
+            "email": "tesztelek2@gmail.com",
             "password": "pbkdf2_sha256$216000$...",
             "birth_date": "2005-01-20",
             "school": 2,
-            "reviews": []
+            "reviews": [14, 15]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 3,
+        "fields": {
+            "username": "student3",
+            "first_name": "Katalin",
+            "last_name": "Balogh",
+            "email": "katalin.balogh@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-04-12",
+            "school": 3,
+            "reviews": [4]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 4,
+        "fields": {
+            "username": "student4",
+            "first_name": "Béla",
+            "last_name": "Kovács",
+            "email": "bela.kovacs@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-12-05",
+            "school": 3,
+            "reviews": [5]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 5,
+        "fields": {
+            "username": "student5",
+            "first_name": "Éva",
+            "last_name": "Németh",
+            "email": "eva.nemeth@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2004-03-15",
+            "school": 4,
+            "reviews": [7]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 6,
+        "fields": {
+            "username": "student6",
+            "first_name": "Ferenc",
+            "last_name": "Papp",
+            "email": "ferenc.papp@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-07-22",
+            "school": 4,
+            "reviews": [8]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 7,
+        "fields": {
+            "username": "student7",
+            "first_name": "László",
+            "last_name": "Török",
+            "email": "laszlo.torok@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-11-11",
+            "school": 5,
+            "reviews": [10]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 8,
+        "fields": {
+            "username": "student8",
+            "first_name": "Réka",
+            "last_name": "Szilágyi",
+            "email": "reka.szilyagi@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-01-29",
+            "school": 5,
+            "reviews": [11]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 9,
+        "fields": {
+            "username": "student9",
+            "first_name": "Tamás",
+            "last_name": "Gulyás",
+            "email": "tamas.gulyas@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2004-08-14",
+            "school": 2,
+            "reviews": [14]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 10,
+        "fields": {
+            "username": "student10",
+            "first_name": "Dóra",
+            "last_name": "Horváth",
+            "email": "dora.horvath@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-05-30",
+            "school": 2,
+            "reviews": [15]
         }
     },
     {
@@ -95,6 +360,138 @@
             "student": 1,
             "teacher": 1,
             "created_at": "2021-05-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 4,
+        "fields": {
+            "rating": 3,
+            "comment": "Tanár elfogadható.",
+            "student": 3,
+            "teacher": 2,
+            "created_at": "2021-06-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 5,
+        "fields": {
+            "rating": 4,
+            "comment": "Jó órák.",
+            "student": 4,
+            "teacher": 2,
+            "created_at": "2021-06-02T11:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 6,
+        "fields": {
+            "rating": 2,
+            "comment": "Néhány órán nehézségek.",
+            "student": 3,
+            "teacher": 3,
+            "created_at": "2021-06-03T12:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 7,
+        "fields": {
+            "rating": 5,
+            "comment": "Kitűnő tanár!",
+            "student": 5,
+            "teacher": 4,
+            "created_at": "2021-06-04T09:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 8,
+        "fields": {
+            "rating": 1,
+            "comment": "Nem segítőkész.",
+            "student": 6,
+            "teacher": 4,
+            "created_at": "2021-06-05T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 9,
+        "fields": {
+            "rating": 4,
+            "comment": "Megbízható és lelkiismeretes.",
+            "student": 5,
+            "teacher": 5,
+            "created_at": "2021-06-06T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 10,
+        "fields": {
+            "rating": 3,
+            "comment": "Tanulásra ösztönöz.",
+            "student": 7,
+            "teacher": 6,
+            "created_at": "2021-06-07T11:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 11,
+        "fields": {
+            "rating": 5,
+            "comment": "Kiváló órák, sokat tanultam.",
+            "student": 8,
+            "teacher": 6,
+            "created_at": "2021-06-08T12:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 12,
+        "fields": {
+            "rating": 2,
+            "comment": "Eléggé fárasztó órák.",
+            "student": 7,
+            "teacher": 7,
+            "created_at": "2021-06-09T13:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 13,
+        "fields": {
+            "rating": 4,
+            "comment": "Jó magyarázatok.",
+            "student": 9,
+            "teacher": 8,
+            "created_at": "2021-06-10T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 14,
+        "fields": {
+            "rating": 5,
+            "comment": "Inspiráló tanár!",
+            "student": 9,
+            "teacher": 9,
+            "created_at": "2021-06-11T15:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 15,
+        "fields": {
+            "rating": 3,
+            "comment": "Kedvező órarend.",
+            "student": 10,
+            "teacher": 10,
+            "created_at": "2021-06-12T16:00:00Z"
         }
     }
 ]
