@@ -18,7 +18,7 @@ export default function Navbar() {
                 <div className="navbar-right">
                     <div className="profile">
                         <span className="profile-name">Kis Pista András</span>
-                        <p className="profile-school">XY általános iskola és kollégium</p>
+                        <p className="profile-school">Debreceni Egyetem</p>
                     </div>
                     <CgProfile className="profile-img" />
                 </div>
