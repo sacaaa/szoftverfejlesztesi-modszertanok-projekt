@@ -1,0 +1,167 @@
+[
+  {
+        "model": "core.review",
+        "pk": 1,
+        "fields": {
+            "rating": 5,
+            "comment": "Kiváló tanár!",
+            "student": 1,
+            "teacher": 1,
+            "created_at": "2021-05-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 2,
+        "fields": {
+            "rating": 1,
+            "comment": "Nagyon rossz tanár!",
+            "student": 1,
+            "teacher": 1,
+            "created_at": "2021-05-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 3,
+        "fields": {
+            "rating": 4,
+            "comment": "Átlagon felüli tanár!",
+            "student": 1,
+            "teacher": 1,
+            "created_at": "2021-05-15T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 4,
+        "fields": {
+            "rating": 3,
+            "comment": "Tanár elfogadható.",
+            "student": 3,
+            "teacher": 2,
+            "created_at": "2021-06-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 5,
+        "fields": {
+            "rating": 4,
+            "comment": "Jó órák.",
+            "student": 4,
+            "teacher": 2,
+            "created_at": "2021-06-02T11:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 6,
+        "fields": {
+            "rating": 2,
+            "comment": "Néhány órán nehézségek.",
+            "student": 3,
+            "teacher": 3,
+            "created_at": "2021-06-03T12:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 7,
+        "fields": {
+            "rating": 5,
+            "comment": "Kitűnő tanár!",
+            "student": 5,
+            "teacher": 4,
+            "created_at": "2021-06-04T09:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 8,
+        "fields": {
+            "rating": 1,
+            "comment": "Nem segítőkész.",
+            "student": 6,
+            "teacher": 4,
+            "created_at": "2021-06-05T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 9,
+        "fields": {
+            "rating": 4,
+            "comment": "Megbízható és lelkiismeretes.",
+            "student": 5,
+            "teacher": 5,
+            "created_at": "2021-06-06T10:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 10,
+        "fields": {
+            "rating": 3,
+            "comment": "Tanulásra ösztönöz.",
+            "student": 7,
+            "teacher": 6,
+            "created_at": "2021-06-07T11:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 11,
+        "fields": {
+            "rating": 5,
+            "comment": "Kiváló órák, sokat tanultam.",
+            "student": 8,
+            "teacher": 6,
+            "created_at": "2021-06-08T12:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 12,
+        "fields": {
+            "rating": 2,
+            "comment": "Eléggé fárasztó órák.",
+            "student": 7,
+            "teacher": 7,
+            "created_at": "2021-06-09T13:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 13,
+        "fields": {
+            "rating": 4,
+            "comment": "Jó magyarázatok.",
+            "student": 9,
+            "teacher": 8,
+            "created_at": "2021-06-10T14:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 14,
+        "fields": {
+            "rating": 5,
+            "comment": "Inspiráló tanár!",
+            "student": 9,
+            "teacher": 9,
+            "created_at": "2021-06-11T15:00:00Z"
+        }
+    },
+    {
+        "model": "core.review",
+        "pk": 15,
+        "fields": {
+            "rating": 3,
+            "comment": "Kedvező órarend.",
+            "student": 10,
+            "teacher": 10,
+            "created_at": "2021-06-12T16:00:00Z"
+        }
+    }
+]

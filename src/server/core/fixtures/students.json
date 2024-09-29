@@ -1,0 +1,142 @@
+[
+    {
+        "model": "core.student",
+        "pk": 1,
+        "fields": {
+            "username": "teszt",
+            "first_name": "Elek",
+            "last_name": "Teszt",
+            "email": "tesztelek@gmail.com",
+            "password": "teszt",
+            "birth_date": "2005-09-20",
+            "school": 1,
+            "reviews": [1, 2, 3, 13]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 2,
+        "fields": {
+            "username": "student2",
+            "first_name": "András",
+            "last_name": "Teszting",
+            "email": "tesztelek2@gmail.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-01-20",
+            "school": 2,
+            "reviews": [14, 15]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 3,
+        "fields": {
+            "username": "student3",
+            "first_name": "Katalin",
+            "last_name": "Balogh",
+            "email": "katalin.balogh@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-04-12",
+            "school": 3,
+            "reviews": [4]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 4,
+        "fields": {
+            "username": "student4",
+            "first_name": "Béla",
+            "last_name": "Kovács",
+            "email": "bela.kovacs@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-12-05",
+            "school": 3,
+            "reviews": [5]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 5,
+        "fields": {
+            "username": "student5",
+            "first_name": "Éva",
+            "last_name": "Németh",
+            "email": "eva.nemeth@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2004-03-15",
+            "school": 4,
+            "reviews": [7]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 6,
+        "fields": {
+            "username": "student6",
+            "first_name": "Ferenc",
+            "last_name": "Papp",
+            "email": "ferenc.papp@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-07-22",
+            "school": 4,
+            "reviews": [8]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 7,
+        "fields": {
+            "username": "student7",
+            "first_name": "László",
+            "last_name": "Török",
+            "email": "laszlo.torok@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-11-11",
+            "school": 5,
+            "reviews": [10]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 8,
+        "fields": {
+            "username": "student8",
+            "first_name": "Réka",
+            "last_name": "Szilágyi",
+            "email": "reka.szilyagi@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2006-01-29",
+            "school": 5,
+            "reviews": [11]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 9,
+        "fields": {
+            "username": "student9",
+            "first_name": "Tamás",
+            "last_name": "Gulyás",
+            "email": "tamas.gulyas@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2004-08-14",
+            "school": 2,
+            "reviews": [14]
+        }
+    },
+    {
+        "model": "core.student",
+        "pk": 10,
+        "fields": {
+            "username": "student10",
+            "first_name": "Dóra",
+            "last_name": "Horváth",
+            "email": "dora.horvath@example.com",
+            "password": "pbkdf2_sha256$216000$...",
+            "birth_date": "2005-05-30",
+            "school": 2,
+            "reviews": [15]
+        }
+    }
+]

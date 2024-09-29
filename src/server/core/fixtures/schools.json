@@ -1,0 +1,134 @@
+[
+    {
+        "model": "core.school",
+        "pk": 1,
+        "fields": {
+            "institution_id": "SCH001",
+            "name": "Debreceni Egyetem",
+            "address": "Budapest, Fő utca 1.",
+            "logo": "static/images/SCH001.svg",
+            "teachers": [1, 8],
+            "students": [1, 9, 10]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 2,
+        "fields": {
+            "institution_id": "SCH002",
+            "name": "Eötvös Loránd Tudományegyetem",
+            "address": "Budapest, Fő utca 22.",
+            "logo": "static/images/SCH002.svg",
+            "teachers": [9, 10],
+            "students": [2, 9, 10]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 3,
+        "fields": {
+            "institution_id": "SCH003",
+            "name": "Budapesti Műszaki Egyetem",
+            "address": "Budapest, Műszaki út 5.",
+            "logo": "static/images/SCH003.svg",
+            "teachers": [2, 3],
+            "students": [3, 4]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 4,
+        "fields": {
+            "institution_id": "SCH004",
+            "name": "Debreceni Egyetem Kossuth Lajos Gyakorló Gimnáziuma",
+            "address": "Debrecen, Fő utca 10.",
+            "logo": "static/images/SCH004.svg",
+            "teachers": [4, 5],
+            "students": [5, 6]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 5,
+        "fields": {
+            "institution_id": "SCH005",
+            "name": "Szegedi Tudományegyetem",
+            "address": "Szeged, Kossuth tér 2.",
+            "logo": "static/images/SCH005.svg",
+            "teachers": [6, 7],
+            "students": [7, 8]
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 6,
+        "fields": {
+            "institution_id": "SCH006",
+            "name": "Pécsi Tudományegyetem",
+            "address": "Pécs, Fő utca 3.",
+            "logo": "static/images/SCH006.svg",
+            "teachers": [],
+            "students": []
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 7,
+        "fields": {
+            "institution_id": "SCH007",
+            "name": "Miskolci Egyetem",
+            "address": "Miskolc, Fő utca 4.",
+            "logo": "static/images/SCH007.jpg",
+            "teachers": [],
+            "students": []
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 8,
+        "fields": {
+            "institution_id": "SCH008",
+            "name": "Szent István Egyetem",
+            "address": "Gödöllő, Fő utca 5.",
+            "logo": "static/images/SCH008.svg",
+            "teachers": [],
+            "students": []
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 9,
+        "fields": {
+            "institution_id": "SCH009",
+            "name": "Óbudai Egyetem",
+            "address": "Budapest, Fő utca 6.",
+            "logo": "static/images/SCH009.svg",
+            "teachers": [],
+            "students": []
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 10,
+        "fields": {
+            "institution_id": "SCH010",
+            "name": "Kaposvári Egyetem",
+            "address": "Kaposvár, Fő utca 7.",
+            "logo": "static/images/SCH010.svg",
+            "teachers": [],
+            "students": []
+        }
+    },
+    {
+        "model": "core.school",
+        "pk": 11,
+        "fields": {
+            "institution_id": "SCH011",
+            "name": "Széchenyi István Egyetem",
+            "address": "Győr, Fő utca 8.",
+            "logo": "static/images/SCH011.svg",
+            "teachers": [],
+            "students": []
+        }
+    }
+]

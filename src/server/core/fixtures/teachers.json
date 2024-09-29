@@ -1,0 +1,158 @@
+[
+    {
+        "model": "core.teacher",
+        "pk": 1,
+        "fields": {
+            "title": "Dr.",
+            "first_name": "János",
+            "last_name": "Kovács",
+            "birth_date": "1980-05-15",
+            "email": "janos.kovacs@example.com",
+            "school": 1,
+            "reviews": [1, 2, 3, 13]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 2,
+        "fields": {
+            "title": "Prof.",
+            "first_name": "Miklós",
+            "last_name": "Nagy",
+            "birth_date": "1975-03-22",
+            "email": "miklos.nagy@example.com",
+            "school": 3,
+            "reviews": [4, 5]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 3,
+        "fields": {
+            "title": "",
+            "first_name": "Erika",
+            "last_name": "Szabó",
+            "birth_date": "1982-11-10",
+            "email": "erika.szabo@example.com",
+            "school": 3,
+            "reviews": [6]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 4,
+        "fields": {
+            "title": "",
+            "first_name": "Gábor",
+            "last_name": "Horváth",
+            "birth_date": "1978-07-05",
+            "email": "gabor.horvath@example.com",
+            "school": 4,
+            "reviews": [7, 8]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 5,
+        "fields": {
+            "title": "Dr.",
+            "first_name": "Katalin",
+            "last_name": "Kiss",
+            "birth_date": "1985-02-17",
+            "email": "katalin.kiss@example.com",
+            "school": 4,
+            "reviews": [9]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 6,
+        "fields": {
+            "title": "",
+            "first_name": "Eszter",
+            "last_name": "Tóth",
+            "birth_date": "1990-08-25",
+            "email": "eszter.toth@example.com",
+            "school": 5,
+            "reviews": [10, 11]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 7,
+        "fields": {
+            "title": "",
+            "first_name": "Andrea",
+            "last_name": "Varga",
+            "birth_date": "1983-12-12",
+            "email": "andrea.varga@example.com",
+            "school": 5,
+            "reviews": [12]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 8,
+        "fields": {
+            "title": "Dr.",
+            "first_name": "László",
+            "last_name": "Molnár",
+            "birth_date": "1970-04-03",
+            "email": "laszlo.molnar@example.com",
+            "school": 1,
+            "reviews": [13]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 9,
+        "fields": {
+            "title": "Prof.",
+            "first_name": "Zoltán",
+            "last_name": "Farkas",
+            "birth_date": "1988-09-19",
+            "email": "zoltan.farkas@example.com",
+            "school": 2,
+            "reviews": [14]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 10,
+        "fields": {
+            "title": "",
+            "first_name": "Balázs",
+            "last_name": "Boros",
+            "birth_date": "1979-06-30",
+            "email": "balazs.boros@example.com",
+            "school": 2,
+            "reviews": [15]
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 11,
+        "fields": {
+            "title": "",
+            "first_name": "Péter",
+            "last_name": "Kis",
+            "birth_date": "1984-01-20",
+            "email": "peter.kiss@example.com",
+            "school": 1,
+            "reviews": []
+        }
+    },
+    {
+        "model": "core.teacher",
+        "pk": 12,
+        "fields": {
+            "title": "",
+            "first_name": "Judit",
+            "last_name": "Németh",
+            "birth_date": "1981-10-14",
+            "email": "judit.nemeth@example.com",
+            "school": 3,
+            "reviews": []
+        }
+    }
+]
