@@ -13,6 +13,7 @@ interface School {
 
 export default function Schools() {
     const [schools, setSchools] = useState<School[]>([]);
+    const [searchQuery, setSearchQuery] = useState<string>(''); // Keresési lekérdezés állapot
 
     useEffect(() => {
         const fetchSchools = async () => {
@@ -34,18 +35,20 @@ export default function Schools() {
     return (
         <>
             <Navbar />
-            <Searchbar />
+            <Searchbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} searchType="school" />
             <div className="school-list">
-                {schools.map((school) => (
-                    <Link
-                        key={school.id}
-                        to={`/schoolprofile/${school.id}`} 
-                        state={{ name: school.name }} 
-                        className="link-decoration"
-                    >
-                        <SchoolCard name={school.name} logo={school.logo} />
-                    </Link>
-                ))}
+                {schools
+                    .filter(school => school.name.toLowerCase().includes(searchQuery.toLowerCase())) // Keresési logika
+                    .map((school) => (
+                        <Link
+                            key={school.id}
+                            to={`/schoolprofile/${school.id}`} 
+                            state={{ name: school.name }} 
+                            className="link-decoration"
+                        >
+                            <SchoolCard name={school.name} logo={school.logo} />
+                        </Link>
+                    ))}
             </div>
         </>
     );
