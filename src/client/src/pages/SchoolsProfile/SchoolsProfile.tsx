@@ -7,8 +7,8 @@ interface School {
     institution_id: string;
     name: string;
     address: string;
-    teachers: number;
-    students: number;
+    teachers: number[]; // Frissítve tömbre
+    students: number[]; // Frissítve tömbre
     logo: string;
 }
 
@@ -44,8 +44,8 @@ export default function SchoolsProfile() {
                 schoolName={school.name}
                 institutionId={school.institution_id}
                 address={school.address}
-                teachersCount={school.teachers}
-                studentsCount={school.students}
+                teachersCount={school.teachers.length} // Hossz lekérése
+                studentsCount={school.students.length} // Hossz lekérése
                 logo={school.logo}
             />
         </>
