@@ -1,6 +1,6 @@
+// TeachersProfile.tsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Profile from "../../components/Profile/Profile";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
@@ -32,7 +32,7 @@ interface Teacher {
 }
 
 export default function TeachersProfile() {
-    const { id } = useParams();
+    const { id } = useParams<{ id: string }>();
     const [teacher, setTeacher] = useState<Teacher | null>(null);
     const [schoolName, setSchoolName] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
@@ -41,30 +41,30 @@ export default function TeachersProfile() {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const reviewsPerPage = 2; // Number of reviews to display per page
 
-    useEffect(() => {
-        const fetchTeacher = async () => {
-            try {
-                const response = await fetch(`http://localhost:8000/api/teachers/${id}/`);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data: Teacher = await response.json();
-                setTeacher(data);
-                
-                const schoolResponse = await fetch(`http://localhost:8000/api/schools/${data.school}/`);
-                if (!schoolResponse.ok) {
-                    throw new Error(`HTTP error! status: ${schoolResponse.status}`);
-                }
-                const schoolData = await schoolResponse.json();
-                setSchoolName(schoolData.name);
-                
-            } catch (error) {
-                console.error("Error fetching teacher data:", error);
-            } finally {
-                setLoading(false);
+    const fetchTeacher = async () => {
+        try {
+            const response = await fetch(`http://localhost:8000/api/teachers/${id}/`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        };
+            const data: Teacher = await response.json();
+            setTeacher(data);
+            
+            const schoolResponse = await fetch(`http://localhost:8000/api/schools/${data.school}/`);
+            if (!schoolResponse.ok) {
+                throw new Error(`HTTP error! status: ${schoolResponse.status}`);
+            }
+            const schoolData = await schoolResponse.json();
+            setSchoolName(schoolData.name);
+            
+        } catch (error) {
+            console.error("Error fetching teacher data:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
+    useEffect(() => {
         fetchTeacher();
     }, [id]);
 
@@ -84,18 +84,23 @@ export default function TeachersProfile() {
     // Calculate total pages
     const totalPages = Math.ceil(totalReviews / reviewsPerPage);
 
+    const handleReviewSubmitted = () => {
+        // Újratölti a tanár adatait a frissített véleményekhez
+        fetchTeacher();
+    };
+
     return (
         <>
             <Navbar />
             <Profile
-                name={`${teacher.title} ${teacher.first_name} ${teacher.last_name}`}
+                name={`${teacher.title} ${teacher.last_name} ${teacher.first_name}`}
                 accountType="Tanár"
                 email={teacher.email}
                 birthdate={teacher.birth_date}
                 school={schoolName}
                 avgRate={teacher.avg_rate ? teacher.avg_rate.toFixed(2) : "N/A"}
             />
-            <ReviewForm />
+            <ReviewForm teacherId={teacher.id} onReviewSubmitted={handleReviewSubmitted} />
             <div className="reviews-list">
                 <h3>Értékelések ({totalReviews})</h3> 
                 {displayedReviews.length > 0 ? (
