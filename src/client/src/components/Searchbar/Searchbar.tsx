@@ -3,7 +3,7 @@ import './Searchbar.css';
 interface SearchbarProps {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
-    searchType: 'teacher' | 'school'; // Új prop a keresési típushoz
+    searchType: 'teacher' | 'school';
 }
 
 export default function Searchbar({ searchQuery, setSearchQuery, searchType }: SearchbarProps) {

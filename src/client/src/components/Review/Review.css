@@ -21,23 +21,23 @@
 
 .review-rating {
     font-size: 1.25rem;
-    color: #4CAF50; /* Green color for the rating */
+    color: #4CAF50;
     font-weight: bold;
 }
 
 .review-date {
     font-size: 0.9rem;
-    color: #777; /* Gray color for the date */
+    color: #777;
 }
 
 .review-comment {
     font-size: 1rem;
     margin: 10px 0;
-    line-height: 1.5; /* Improve readability */
+    line-height: 1.5;
 }
 
 .review-student {
     font-size: 0.95rem;
     font-style: italic;
-    color: #555; /* Slightly darker gray for the student's name */
+    color: #555;
 }

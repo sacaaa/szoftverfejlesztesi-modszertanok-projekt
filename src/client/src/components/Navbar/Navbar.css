@@ -13,44 +13,43 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: transparent; /* Háttérszín eltávolítva */
+    background-color: transparent;
 }
 
 .navbar-left h1 {
-    font-size: 2.5rem; /* Nagyobb cím méret */
+    font-size: 2.5rem;
     font-weight: bold;
-    color: black; /* Fekete szín */
+    color: black;
 }
 
 .navbar-center {
-    display: flex; /* Flexbox a középső részhez */
-    justify-content: center; /* Középre igazítás */
-    flex: 1; /* Középső rész rugalmasan kitölti a helyet */
+    display: flex;
+    justify-content: center;
+    flex: 1;
 }
 
 .navbar-center a {
     margin: 0 20px;
-    font-size: 1.25rem; /* Kisebb betűméret */
+    font-size: 1.25rem;
     text-decoration: none;
-    color: black; /* Fekete szín */
-    font-weight: normal; /* Vastagság csökkentése */
-    transition: font-weight 0.3s ease; /* Betűvastagság animáció */
+    color: black;
+    font-weight: normal;
+    transition: font-weight 0.3s ease;
 }
 
-/* Aktuális oldal és hover hatás */
 .navbar-center a:hover,
 .navbar-center a.active {
-    font-weight: bold; /* Vastag betű */
+    font-weight: bold;
 }
 
 .navbar-right {
     display: flex;
     align-items: center; 
-    text-align: right; /* Jobbra igazítva */
+    text-align: right;
 }
 
 .profile {
-    text-align: right; /* Profil szövegek jobbra igazítva */
+    text-align: right;
     margin-right: 10px;
 }
 
@@ -65,17 +64,17 @@ body {
 }
 
 .profile-img {
-    width: 3rem; /* Nagyobb profil ikon */
+    width: 3rem;
     height: 3rem;
-    color: black; /* Fekete ikon */
+    color: black;
 }
 
 .Home {
     text-decoration: none;
-    color: black; /* Fekete szín */
+    color: black;
 }
 
 .profile-link {
     text-decoration: none;
-    color: black; /* Fekete szín */
+    color: black;
 }

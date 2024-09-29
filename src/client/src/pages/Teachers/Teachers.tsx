@@ -61,8 +61,7 @@ export default function Teachers() {
     const getSchoolNameById = (schoolId: number) => {
         return schools[schoolId] || 'Ismeretlen Iskola';
     };
-
-    // Szűrés a keresési lekérdezés alapján
+    
     const filteredTeachers = teachers.filter((teacher) => {
         const fullName = `${teacher.title} ${teacher.last_name} ${teacher.first_name}`.toLowerCase();
         const schoolName = getSchoolNameById(teacher.school).toLowerCase();

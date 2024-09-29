@@ -1,42 +1,42 @@
 .homepage {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Függőleges középre igazítás */
-    align-items: center; /* Vízszintes középre igazítás */
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
-    min-height: 100vh; /* Magasság beállítása a teljes nézethez */
-    width: var(--main-max-width); /* A maximális szélesség beállítása */
-    margin: 0 auto; /* Középre igazítás */
-    background-color: var(--main-bg-color); /* Háttérszín */
+    min-height: 100vh;
+    width: var(--main-max-width);
+    margin: 0 auto;
+    background-color: var(--main-bg-color);
 }
 
 .title {
-    font-size: 4rem; /* Nagyobb betűméret a címhez */
+    font-size: 4rem;
     color: var(--main-text-color);
-    margin-bottom: 1rem; /* Alsó margó a cím alatt */
+    margin-bottom: 1rem;
 }
 
 .description {
-    text-align: center; /* Középre igazítás */
-    margin-bottom: 2rem; /* Margó a gombok felett */
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .description p {
-    font-size: 1.2rem; /* Szöveg mérete */
-    color: #000000; /* Szöveg színe */
-    margin: 0.5rem 0; /* Margó a bekezdések között */
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 0.5rem 0;
 }
 
 .button-container {
-    display: flex; /* Gombok egymás mellett */
-    gap: 1rem; /* Különbség a gombok között */
+    display: flex;
+    gap: 1rem;
 }
 
 .search-button {
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50; /* Zöld szín */
+    background-color: #4CAF50;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -44,5 +44,5 @@
 }
 
 .search-button:hover {
-    background-color: #45a049; /* Sötétebb zöld hover állapot */
+    background-color: #45a049;
 }

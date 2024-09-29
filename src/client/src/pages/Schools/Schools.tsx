@@ -13,7 +13,7 @@ interface School {
 
 export default function Schools() {
     const [schools, setSchools] = useState<School[]>([]);
-    const [searchQuery, setSearchQuery] = useState<string>(''); // Keresési lekérdezés állapot
+    const [searchQuery, setSearchQuery] = useState<string>('');
 
     useEffect(() => {
         const fetchSchools = async () => {
@@ -38,7 +38,7 @@ export default function Schools() {
             <Searchbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} searchType="school" />
             <div className="school-list">
                 {schools
-                    .filter(school => school.name.toLowerCase().includes(searchQuery.toLowerCase())) // Keresési logika
+                    .filter(school => school.name.toLowerCase().includes(searchQuery.toLowerCase()))
                     .map((school) => (
                         <Link
                             key={school.id}

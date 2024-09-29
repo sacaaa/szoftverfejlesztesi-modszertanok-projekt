@@ -1,4 +1,3 @@
-// TeachersProfile.tsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
@@ -37,9 +36,8 @@ export default function TeachersProfile() {
     const [schoolName, setSchoolName] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
     
-    // Pagination state
     const [currentPage, setCurrentPage] = useState<number>(1);
-    const reviewsPerPage = 2; // Number of reviews to display per page
+    const reviewsPerPage = 2;
 
     const fetchTeacher = async () => {
         try {
@@ -76,16 +74,13 @@ export default function TeachersProfile() {
         return <p>Tanár nem található.</p>;
     }
 
-    // Calculate the start and end index for the current page's reviews
     const startIndex = (currentPage - 1) * reviewsPerPage;
     const displayedReviews = teacher.reviews.slice(startIndex, startIndex + reviewsPerPage);
     const totalReviews = teacher.reviews.length; 
 
-    // Calculate total pages
     const totalPages = Math.ceil(totalReviews / reviewsPerPage);
 
     const handleReviewSubmitted = () => {
-        // Újratölti a tanár adatait a frissített véleményekhez
         fetchTeacher();
     };
 

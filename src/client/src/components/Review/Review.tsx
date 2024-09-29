@@ -10,8 +10,8 @@ interface Review {
     id: number;
     rating: number;
     comment: string;
-    student: Student; // Include the student type
-    created_at: string; // Include created_at for review date
+    student: Student;
+    created_at: string;
 }
 
 interface ReviewProps {
@@ -29,7 +29,7 @@ const ReviewComponent: React.FC<ReviewProps> = ({ review }) => {
             </div>
             <p className="review-comment">{review.comment}</p>
             <p className="review-student">
-                Diák: {review.student.first_name} {review.student.last_name}
+                Diák: {review.student.last_name} {review.student.first_name}
             </p>
         </div>
     );

@@ -1,4 +1,3 @@
-// ReviewForm.tsx
 import { useState } from "react";
 import './ReviewForm.css';
 
@@ -23,7 +22,6 @@ export default function ReviewForm({ teacherId, onReviewSubmitted }: ReviewFormP
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    // Ha van autentikáció, például JWT token
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
                 body: JSON.stringify({
@@ -38,11 +36,8 @@ export default function ReviewForm({ teacherId, onReviewSubmitted }: ReviewFormP
                 throw new Error(errorData.detail || 'Hiba a vélemény beküldésekor.');
             }
 
-            // Reset form
             setRating(5);
             setComment('');
-
-            // Hívja meg a callbackot a visszatöltéshez
             onReviewSubmitted();
         } catch (err: any) {
             console.error(err);

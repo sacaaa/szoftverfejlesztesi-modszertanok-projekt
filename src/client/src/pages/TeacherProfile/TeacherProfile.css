@@ -1,37 +1,35 @@
-/* TeacherProfile.css */
-
 .reviews-list {
     margin-top: 20px;
 }
 
 .pagination {
     display: flex;
-    justify-content: center; /* Center the pagination controls */
+    justify-content: center;
     margin-top: 10px; 
 }
 
 .pagination button {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff;
     color: white; 
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding for the buttons */
-    margin: 0 10px; /* Space between buttons */
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 10px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transition effect */
+    transition: background-color 0.3s;
 }
 
 .pagination button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
 }
 
 .pagination button:disabled {
-    background-color: #ccc; /* Gray color for disabled buttons */
-    cursor: not-allowed; /* Change cursor to indicate disabled state */
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .pagination span {
-    align-self: center; /* Center the page number display */
-    margin: 0 10px; /* Space around the page number */
-    font-weight: bold; /* Bold text for visibility */
+    align-self: center;
+    margin: 0 10px;
+    font-weight: bold;
 }

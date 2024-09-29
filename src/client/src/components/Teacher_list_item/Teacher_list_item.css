@@ -14,11 +14,11 @@
 .teacher-info {
     display: flex;
     align-items: center;
-    padding-left: 20px; /* Ezzel szabályozzuk, hogy az avatar és a kártya bal széle között egyenlő távolság legyen */
+    padding-left: 20px;
 }
 
 .teacher-avatar {
-    margin-right: 20px; /* Az avatar és a név közötti távolság */
+    margin-right: 20px;
 }
 
 .teacher-avatar > .teacher-avatar-img {
@@ -29,8 +29,8 @@
 .teacher-details {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Balra igazítja a nevet és az iskolát */
-    margin-left: 20px; /* A név távolsága az avatartól megegyezik a kártya bal szélétől mért távolsággal */
+    align-items: flex-start;
+    margin-left: 20px;
 }
 
 .teacher-name {

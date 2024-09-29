@@ -1,5 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
-import { Link } from "react-router-dom"; // Importálás a Link komponenshez
+import { Link } from "react-router-dom";
 import './HomePage.css';
 
 export default function HomePage() {
