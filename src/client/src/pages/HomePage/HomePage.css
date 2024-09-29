@@ -23,7 +23,7 @@
 
 .description p {
     font-size: 1.2rem;
-    color: #000000;
+    color: var(--main-text-color);
     margin: 0.5rem 0;
 }
 

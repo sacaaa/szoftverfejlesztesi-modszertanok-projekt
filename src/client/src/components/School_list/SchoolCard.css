@@ -1,6 +1,6 @@
 .card {
     width: 300px;
-    background-color: #ffffff;
+    background-color: #1E5780;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
@@ -9,7 +9,8 @@
 
 .card-body {
     height: 250px;
-    background-color: #f4d35e;
+    background-color: #A6D2EC
+    ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +21,7 @@
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: white;
 }
 
 .school-logo {

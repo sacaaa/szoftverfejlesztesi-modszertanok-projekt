@@ -5,7 +5,7 @@ interface ProfileProps {
     accountType: string;
     email: string;
     birthdate: string;
-    school: string;
+    school: { name: string; id: number }; // Hozzáadtam az iskolához egy azonosítót
     avgRate: string | null;
 }
 
@@ -16,7 +16,12 @@ export default function Profile({ name, accountType, email, birthdate, school, a
             <p><strong>Fiók típusa:</strong> {accountType}</p>
             <p><strong>Email:</strong> {email}</p>
             <p><strong>Születési dátum:</strong> {birthdate}</p>
-            <p><strong>Iskola:</strong> {school}</p>
+            <p>
+                <strong>Iskola: </strong>
+                <a href={`http://localhost:5173/schoolprofile/${school.id}`} className="school-link">
+                    {school.name}
+                </a>
+            </p>
             <p><strong>Átlagos értékelés:</strong> {avgRate !== null ? avgRate : 'N/A'}</p>
         </div>
     );

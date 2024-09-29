@@ -4,6 +4,7 @@ import Searchbar from "../../components/Searchbar/Searchbar";
 import SchoolCard from "../../components/School_list/SchoolCard";
 import { Link } from "react-router-dom";
 import './Schools.css';
+import Footer from "../../components/Footer/Footer";
 
 interface School {
     id: number;
@@ -50,6 +51,7 @@ export default function Schools() {
                         </Link>
                     ))}
             </div>
+            <Footer />
         </>
     );
 }

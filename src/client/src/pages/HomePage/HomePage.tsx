@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import './HomePage.css';
 
@@ -29,6 +30,7 @@ export default function HomePage() {
                     </Link>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

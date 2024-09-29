@@ -26,3 +26,21 @@
 .student-card p strong {
     color: #333333;
 }
+
+.school-link {
+    color: #007bff; /* Alapértelmezett kék szín */
+    text-decoration: none; /* Aláhúzás eltávolítása */
+    font-weight: bold; /* Kiemelés */
+    border-bottom: 2px solid #007bff; /* Kék aláhúzás */
+    transition: color 0.3s, border-bottom 0.3s; /* Zökkenőmentes animáció */
+}
+
+.school-link:hover {
+    color: #0056b3; /* Sötétebb kék árnyalat hover állapotban */
+    border-bottom: 2px solid #0056b3; /* Sötétebb aláhúzás hover állapotban */
+}
+
+.school-link:focus {
+    outline: none; /* A fókusz keret eltüntetése */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Fókusz keret */
+}

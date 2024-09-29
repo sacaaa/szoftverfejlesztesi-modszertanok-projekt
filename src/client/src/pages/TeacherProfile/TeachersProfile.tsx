@@ -5,6 +5,7 @@ import Profile from "../../components/Profile/Profile";
 import ReviewForm from "../../components/ReviewForm/ReviewForm";
 import ReviewComponent from "../../components/Review/Review";
 import './TeacherProfile.css';
+import Footer from "../../components/Footer/Footer";
 
 interface Review {
     id: number;
@@ -33,7 +34,7 @@ interface Teacher {
 export default function TeachersProfile() {
     const { id } = useParams<{ id: string }>();
     const [teacher, setTeacher] = useState<Teacher | null>(null);
-    const [schoolName, setSchoolName] = useState<string>('');
+    const [schoolName, setSchoolName] = useState<{ name: string; id: number } | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     
     const [currentPage, setCurrentPage] = useState<number>(1);
@@ -53,7 +54,7 @@ export default function TeachersProfile() {
                 throw new Error(`HTTP error! status: ${schoolResponse.status}`);
             }
             const schoolData = await schoolResponse.json();
-            setSchoolName(schoolData.name);
+            setSchoolName({ name: schoolData.name, id: schoolData.id });
             
         } catch (error) {
             console.error("Error fetching teacher data:", error);
@@ -77,7 +78,6 @@ export default function TeachersProfile() {
     const startIndex = (currentPage - 1) * reviewsPerPage;
     const displayedReviews = teacher.reviews.slice(startIndex, startIndex + reviewsPerPage);
     const totalReviews = teacher.reviews.length; 
-
     const totalPages = Math.ceil(totalReviews / reviewsPerPage);
 
     const handleReviewSubmitted = () => {
@@ -87,14 +87,18 @@ export default function TeachersProfile() {
     return (
         <>
             <Navbar />
-            <Profile
-                name={`${teacher.title} ${teacher.last_name} ${teacher.first_name}`}
-                accountType="Tanár"
-                email={teacher.email}
-                birthdate={teacher.birth_date}
-                school={schoolName}
-                avgRate={teacher.avg_rate ? teacher.avg_rate.toFixed(2) : "N/A"}
-            />
+            {schoolName ? (
+                <Profile
+                    name={`${teacher.title} ${teacher.last_name} ${teacher.first_name}`}
+                    accountType="Tanár"
+                    email={teacher.email}
+                    birthdate={teacher.birth_date}
+                    school={schoolName}
+                    avgRate={teacher.avg_rate ? teacher.avg_rate.toFixed(2) : "N/A"}
+                />
+            ) : (
+                <p>Iskola nem található.</p>
+            )}
             <ReviewForm teacherId={teacher.id} onReviewSubmitted={handleReviewSubmitted} />
             <div className="reviews-list">
                 <h3>Értékelések ({totalReviews})</h3> 
@@ -105,22 +109,25 @@ export default function TeachersProfile() {
                 ) : (
                     <p>Ehhez a tanárhoz még nem érkezett értékelés.</p>
                 )}
-                <div className="pagination">
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                        disabled={currentPage === 1}
-                    >
-                        Előző
-                    </button>
-                    <span>{currentPage} / {totalPages}</span>
-                    <button
-                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                        disabled={currentPage === totalPages}
-                    >
-                        Következő
-                    </button>
-                </div>
+                {totalReviews > 0 && totalPages > 1 && (
+                    <div className="pagination">
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                            disabled={currentPage === 1}
+                        >
+                            Előző
+                        </button>
+                        <span>{currentPage} / {totalPages}</span>
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                            disabled={currentPage === totalPages}
+                        >
+                            Következő
+                        </button>
+                    </div>
+                )}
             </div>
+            <Footer />
         </>
     );
 }

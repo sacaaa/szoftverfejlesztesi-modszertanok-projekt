@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import SchoolProfile from "../../components/SchoolProfile/SchoolProfile";
+import Footer from "../../components/Footer/Footer";
 
 interface School {
     institution_id: string;
@@ -48,6 +49,7 @@ export default function SchoolsProfile() {
                 studentsCount={school.students.length}
                 logo={school.logo}
             />
+            <Footer />
         </>
     );
 }
